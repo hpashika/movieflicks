@@ -44,12 +44,28 @@ curl "http://localhost:5000/api/buggy_code?movie=Breaking%20Bad" | jq
 ```
 
 To see the metrics emitted by the app
+
 ```
 http://localhost:5000/metrics
 ```
 
 To build the dashboard
-Visit 
+Visit
+
 ```
 http://localhost:3000/ (admin/admin)
-``` 
+```
+
+Create Prometheus DataSource
+https://github.com/hpashika/movieflicks/blob/main/images/DatasourceMenu.png
+https://github.com/hpashika/movieflicks/blob/main/images/AddDataSource.png
+https://github.com/hpashika/movieflicks/blob/main/images/Configuration.png
+https://github.com/hpashika/movieflicks/blob/main/images/PrometheusSetting.png
+
+Create Dashboard
+https://github.com/hpashika/movieflicks/blob/main/images/ImportMenu.png
+https://github.com/hpashika/movieflicks/blob/main/images/ImportDashboardJson.png
+Paste Json content from MovieFlicks.json file from the repo.
+
+Dashboard
+https://github.com/hpashika/movieflicks/blob/main/images/GrafanaDashboard.png
