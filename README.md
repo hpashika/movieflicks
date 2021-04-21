@@ -53,18 +53,3 @@ Visit
 ```
 http://localhost:3000/ (admin/admin)
 ``` 
-
-
-
-
-bash-5.0$ export http_proxy=http://www-proxy-hqdc.us.oracle.com:80/
-bash-5.0$ export https_proxy=http://www-proxy-hqdc.us.oracle.com:80/
-bash-5.0$ export no_proxy=localhost,127.0.0.1,.us.oracle.com,.oraclecorp.com,*.oc9qadev.com
-bash-5.0$ grafana-cli plugins install marcusolsson-csv-datasource
-installing marcusolsson-csv-datasource @ 0.4.1
-from: https://grafana.com/api/plugins/marcusolsson-csv-datasource/versions/0.4.1/download
-into: /var/lib/grafana/plugins
-
-✔ Installed marcusolsson-csv-datasource successfully 
-
-Restart grafana after installing plugins . <service grafana-server restart>
