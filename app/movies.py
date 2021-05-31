@@ -4,36 +4,46 @@ database = [
     {"id" : 1,
     "name" : "Breaking Bad",
     "description" : "Crime thriller about drugs and professor",
-    "genre" : "crime" },
+    "genre" : "crime",
+    "image" : "/media/breaking_bad.jpeg" },
     {"id": 2,
-    "name" : "Crown",
+    "name" : "The Crown",
     "description" : "About Royal Family Politics",
-    "genre" : "drama"},
+    "genre" : "drama",
+    "image" : "/media/the_crown.jpeg"},
     {"id": 3,
     "name" : "Ozark",
     "description" : "Crime Thriller about drugs mafia",
-    "genre" : "thriller"},
+    "genre" : "thriller",
+    "image" : "/media/ozark.jpeg"},
     {"id": 4,
     "name" : "Money Heist",
     "description" : "Crime Thriller about Bank Robbery",
-    "genre" : "crime"},
+    "genre" : "crime",
+    "image" : "/media/money_heist.jpeg"},
     {"id" : 5,
     "name" : "Queens Gambit",
     "description" : "About Chess",
-    "genre" : "drama"},
+    "genre" : "drama",
+    "image": "/media/queens_gambit.jpeg"},
     {"id": 6,
      "name": "Friends",
-    "genre" : "comedy"}
+    "genre" : "comedy",
+    "image" : "/media/freinds.jpeg"}
 ]
 
 def browse() :
     return database;
 
 def search(movie) :
+    s_list = []
     for m in database:
         if m['name'] == movie:
-            return m
-    return {"message" : f"Sorry we don't have {movie}, why don't you watch Friends"}
+            s_list.append(m)
+    if len(s_list) > 0 :
+        return s_list;
+
+    return [{"message" : f"Sorry we don't have {movie}, why don't you watch Friends"}]
 
 def streaming(movie) :
     time.sleep(random.random())
