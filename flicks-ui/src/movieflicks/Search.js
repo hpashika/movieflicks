@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Titles from './Titles';
-import app_host_port from './Api'
+import app_host_port from './Api';
 function Search() {
   const [searchTitle, setSearchTitle] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -34,7 +34,7 @@ function Search() {
         </div>
       </div>
       <br />
-      <Titles flicks={searchResults} />
+      <Titles flicks={searchResults} refreshCounter={Math.random()} />
     </div>
   );
 }

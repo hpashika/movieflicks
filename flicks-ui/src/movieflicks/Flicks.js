@@ -8,9 +8,8 @@ function Flicks() {
   const [flicks, setFlicks] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
-  const [genre, setGenre] = useState('');
-  const [searchFlick, setSearchFlick] = useState('');
   const [menu, setMenu] = useState('top');
+
   const getFlicks = async () => {
     let flicksUrl = app_host_port() + '/api/browse';
     if (menu !== 'top' && menu !== 'search') {
@@ -55,7 +54,7 @@ function Flicks() {
     return (
       <div>
         <NavBar setMenu={setMenu} />
-        <Titles flicks={flicks} />
+        <Titles flicks={flicks} menu={menu} />
       </div>
     );
   }

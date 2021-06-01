@@ -25,6 +25,9 @@ docker-compose up -d
 ```
 
 Inovke Endpoints :
+In browser open http://localhost:80/ , you will be shown an interface to browse, select , play movies. Feel free to open in multiple tabs and hit the buttons
+
+Alternatively you can curl as below.
 
 ```
 curl "http://localhost:5000/api/browse" | jq
