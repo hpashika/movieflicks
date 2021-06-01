@@ -32,3 +32,12 @@ services:
       - 5000:5000
     networks:
       - grafana
+
+  ui:
+    build: ./flicks-ui
+    ports:
+      - 80:80
+    volumes:
+      - ./flicks-ui/public/media:/home/app/web/project/media/
+    networks:
+      - grafana
